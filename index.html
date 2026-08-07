@@ -1,163 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shersingh Charan | Portfolio</title>
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shersingh Charan</title>
 
-    body{
-      background: linear-gradient(135deg,#0f172a,#1e293b);
-      color:white;
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-    .card{
-      width:100%;
-      max-width:420px;
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      border-radius:24px;
-      padding:30px 25px;
-      text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.35);
-    }
+body{
+    background:#1f2937;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
 
-    .avatar{
-      width:110px;
-      height:110px;
-      border-radius:50%;
-      background:#ffffff22;
-      margin:0 auto 20px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:50px;
-      border:2px solid #ffffff33;
-    }
+.container{
+    max-width:400px;
+    width:100%;
+    text-align:center;
+    background:#2d3748;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
 
-    h1{
-      font-size:2rem;
-      margin-bottom:8px;
-    }
+img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid #555;
+    object-fit:cover;
+}
 
-    .role{
-      color:#cbd5e1;
-      margin-bottom:20px;
-      font-size:1rem;
-    }
+h1{
+    margin-top:20px;
+    font-size:40px;
+}
 
-    .about{
-      line-height:1.6;
-      color:#e2e8f0;
-      margin-bottom:28px;
-      font-size:0.95rem;
-    }
+.role{
+    color:#cbd5e1;
+    margin:15px 0;
+    font-size:22px;
+}
 
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-      margin-bottom:28px;
-    }
+.about{
+    line-height:1.8;
+    margin-bottom:20px;
+}
 
-    .skill{
-      background:#ffffff14;
-      border:1px solid #ffffff1f;
-      padding:8px 14px;
-      border-radius:999px;
-      font-size:0.9rem;
-    }
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:25px;
+}
 
-    .buttons{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
+.skill{
+    border:1px solid #777;
+    padding:10px 18px;
+    border-radius:30px;
+}
 
-    .btn{
-      display:block;
-      text-decoration:none;
-      padding:14px;
-      border-radius:12px;
-      font-weight:bold;
-      transition:0.2s;
-    }
+.btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
 
-    .primary{
-      background:white;
-      color:#0f172a;
-    }
+.github{
+    background:white;
+    color:black;
+}
 
-    .primary:hover{
-      transform:translateY(-2px);
-    }
+.contact{
+    background:#374151;
+    color:white;
+}
 
-    .secondary{
-      border:1px solid #ffffff33;
-      color:white;
-      background:#ffffff0d;
-    }
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
 
-    .secondary:hover{
-      background:#ffffff18;
-    }
+footer{
+    margin-top:25px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+</style>
 
-    footer{
-      margin-top:25px;
-      font-size:0.85rem;
-      color:#94a3b8;
-    }
-  </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="avatar">👨‍💻</div>
+<div class="container">
 
-    <h1>Shersingh Charan</h1>
-    <p class="role">Web Developer • Student • Learner</p>
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
 
-    <p class="about">
-      Welcome to my portfolio website! I am learning web development and
-      building modern websites using HTML, CSS and GitHub Pages.
-    </p>
+<h1>Shersingh Charan</h1>
 
-    <div class="skills">
-      <span class="skill">HTML</span>
-      <span class="skill">CSS</span>
-      <span class="skill">JavaScript</span>
-      <span class="skill">GitHub</span>
-    </div>
+<p class="role">
+Web Developer • Student • Learner
+</p>
 
-    <div class="buttons">
-      <a class="btn primary" href="https://github.com/charan785192-arch" target="_blank">
-        Visit My GitHub
-      </a>
+<p class="about">
+Welcome to my portfolio website! I build modern websites using HTML, CSS and JavaScript.
+</p>
 
-      <a class="btn secondary" href="mailto:your-email@example.com">
-        Contact Me
-      </a>
-    </div>
+<div class="skills">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">GitHub</span>
+</div>
 
-    <footer>
-      © 2026 Shersingh Charan. All rights reserved.
-    </footer>
-  </div>
+<a class="btn github"
+href="https://github.com/charan785192-arch"
+target="_blank">
+Visit My GitHub
+</a>
+
+<a class="btn contact"
+href="mailto:charan785192@gmail.com">
+Contact Me
+</a>
+
+<a class="btn whatsapp"
+href="https://wa.me/917490093629?text=Mujhe%20ye%20product%20chahiye"
+target="_blank">
+🛒 Buy on WhatsApp
+</a>
+
+<footer>
+© 2026 Shersingh Charan. All Rights Reserved.
+</footer>
+
+</div>
 
 </body>
 </html>
-<button onclick="window.open('https://wa.me/917490093629?text=Mujhe%20ye%20product%20chahiye','_blank')">
-🛒 Buy on WhatsApp
-</button>
