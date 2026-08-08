@@ -1,155 +1,1393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shersingh Charan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+  <title>Shersingh Charan | Web Developer</title>
 
-body{
-    background:#1f2937;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-.container{
-    max-width:400px;
-    width:100%;
-    text-align:center;
-    background:#2d3748;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(0,0,0,.3);
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #020817;
+      color: white;
+      line-height: 1.6;
+    }
 
-img{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    border:4px solid #555;
-    object-fit:cover;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-h1{
-    margin-top:20px;
-    font-size:40px;
-}
+    /* NAVBAR */
 
-.role{
-    color:#cbd5e1;
-    margin:15px 0;
-    font-size:22px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-.about{
-    line-height:1.8;
-    margin-bottom:20px;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:25px;
-}
+      padding: 18px 6%;
 
-.skill{
-    border:1px solid #777;
-    padding:10px 18px;
-    border-radius:30px;
-}
+      background: rgba(2, 8, 23, 0.95);
+      backdrop-filter: blur(15px);
 
-.btn{
-    display:block;
-    width:100%;
-    padding:15px;
-    margin:12px 0;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
-}
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-.github{
-    background:white;
-    color:black;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
 
-.contact{
-    background:#374151;
-    color:white;
-}
+    .logo span {
+      color: #5572ff;
+    }
 
-.whatsapp{
-    background:#25D366;
-    color:white;
-}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
 
-footer{
-    margin-top:25px;
-    color:#cbd5e1;
-    font-size:14px;
-}
-</style>
+    .nav-links a {
+      color: #ddd;
+      transition: 0.3s;
+    }
 
+    .nav-links a:hover {
+      color: #5d76ff;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg,#4169ff,#7c3aed);
+      padding: 11px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 50px;
+
+      padding: 80px 7%;
+
+      background:
+      radial-gradient(
+        circle at 75% 30%,
+        rgba(48,86,255,.35),
+        transparent 35%
+      );
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .small-title {
+      display: inline-block;
+
+      padding: 7px 15px;
+
+      border: 1px solid #245bdb;
+      border-radius: 10px;
+
+      color: #5ea0ff;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px,7vw,82px);
+      line-height: .95;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #5570ff;
+    }
+
+    .hero h2 {
+      margin-bottom: 15px;
+      color: #e7e7e7;
+    }
+
+    .hero p {
+      color: #aeb9d1;
+      font-size: 18px;
+    }
+
+    .hero p span {
+      color: #5c75ff;
+      font-weight: bold;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+
+      margin-top: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+
+      border-radius: 10px;
+
+      font-weight: bold;
+
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,#405eff,#7b3ff2);
+    }
+
+    .btn-secondary {
+      border: 1px solid #667085;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* PROFILE */
+
+    .profile {
+      width: 330px;
+      height: 330px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: linear-gradient(135deg,#1667ff,#813cff);
+
+      box-shadow:
+      0 0 80px rgba(55,91,255,.5);
+
+      border: 5px solid #2464ff;
+    }
+
+    .profile-inner {
+      width: 305px;
+      height: 305px;
+
+      border-radius: 50%;
+
+      background: #111b30;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 70px;
+      font-weight: 900;
+
+      color: #6280ff;
+    }
+
+    /* SOCIAL */
+
+    .social {
+      display: flex;
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .social a {
+      width: 45px;
+      height: 45px;
+
+      border-radius: 50%;
+
+      border: 1px solid #35425e;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #0b1428;
+
+      transition: .3s;
+    }
+
+    .social a:hover {
+      background: #405eff;
+      transform: translateY(-4px);
+    }
+
+    /* FEATURES */
+
+    .features {
+      max-width: 1200px;
+
+      margin: -35px auto 60px;
+
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+
+      background: #0b1427;
+
+      border: 1px solid #182742;
+
+      border-radius: 15px;
+
+      overflow: hidden;
+    }
+
+    .feature {
+      text-align: center;
+
+      padding: 30px 20px;
+
+      border-right: 1px solid #26334c;
+    }
+
+    .feature:last-child {
+      border-right: 0;
+    }
+
+    .feature-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #9da9c0;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 7%;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      color: #5772ff;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 2fr;
+
+      gap: 25px;
+    }
+
+    .box {
+      background: #0a1427;
+
+      border: 1px solid #192944;
+
+      border-radius: 15px;
+
+      padding: 25px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-top {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 7px;
+    }
+
+    .bar {
+      height: 7px;
+
+      background: #202d45;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+
+      height: 100%;
+
+      background: linear-gradient(
+        90deg,
+        #4169ff,
+        #8b5cf6
+      );
+
+      border-radius: 10px;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 20px;
+    }
+
+    .project {
+      background: #0a1427;
+
+      border: 1px solid #1c2b48;
+
+      border-radius: 15px;
+
+      padding: 18px;
+
+      transition: .3s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+
+      border-color: #4b66ff;
+    }
+
+    .project-img {
+      height: 160px;
+
+      border-radius: 10px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #182b61,
+        #302066
+      );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 45px;
+
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 5px 10px;
+
+      border: 1px solid #3158ba;
+
+      border-radius: 20px;
+
+      color: #76a0ff;
+
+      font-size: 12px;
+
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #9ba7bd;
+
+      font-size: 14px;
+    }
+
+    .project-link {
+      display: inline-block;
+
+      color: #5e7aff;
+
+      margin-top: 12px;
+
+      font-weight: bold;
+    }
+
+    /* SHOP */
+
+    .shop {
+      max-width: 1200px;
+
+      margin: 50px auto;
+
+      padding: 45px;
+
+      border-radius: 20px;
+
+      background:
+      linear-gradient(
+        110deg,
+        #172d91,
+        #432092
+      );
+    }
+
+    .shop-content {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .shop h2 {
+      font-size: 38px;
+    }
+
+    .shop p {
+      color: #d3d8f0;
+
+      margin: 10px 0 20px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+
+      padding: 13px 22px;
+
+      border-radius: 10px;
+
+      background: white;
+
+      color: #111;
+
+      font-weight: bold;
+    }
+
+    .products {
+      display: grid;
+
+      grid-template-columns: repeat(4,1fr);
+
+      gap: 12px;
+    }
+
+    .product {
+      background: #111827;
+
+      padding: 10px;
+
+      border-radius: 10px;
+    }
+
+    .product-img {
+      height: 110px;
+
+      border-radius: 7px;
+
+      background: #e7e7e7;
+
+      color: #111;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 35px;
+    }
+
+    .product h4 {
+      margin-top: 8px;
+    }
+
+    .price {
+      color: #7ea0ff;
+
+      font-weight: bold;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      text-align: center;
+
+      background: #0a1427;
+
+      border: 1px solid #1c2b48;
+
+      border-radius: 18px;
+
+      padding: 55px 20px;
+    }
+
+    .contact-box p {
+      color: #a8b2c7;
+
+      margin: 10px auto 25px;
+
+      max-width: 600px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #030a18;
+
+      border-top: 1px solid #16233a;
+
+      padding: 45px 7% 25px;
+
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr;
+
+      gap: 40px;
+
+      max-width: 1200px;
+
+      margin: auto;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #8995aa;
+
+      display: block;
+
+      margin: 7px 0;
+    }
+
+    .copyright {
+      text-align: center;
+
+      color: #657087;
+
+      border-top: 1px solid #16233a;
+
+      margin-top: 35px;
+
+      padding-top: 20px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 60px;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .buttons,
+      .social {
+        justify-content: center;
+      }
+
+      .profile {
+        width: 260px;
+        height: 260px;
+      }
+
+      .profile-inner {
+        width: 238px;
+        height: 238px;
+
+        font-size: 55px;
+      }
+
+      .features {
+        margin: 20px;
+
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-content {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .products {
+        grid-template-columns: repeat(2,1fr);
+
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:500px) {
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        border-right: 0;
+
+        border-bottom: 1px solid #26334c;
+      }
+
+      .shop {
+        margin: 30px 15px;
+
+        padding: 30px 18px;
+      }
+
+      .shop h2 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="container">
+  <!-- NAVBAR -->
 
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+  <nav>
 
-<h1>Shersingh Charan</h1>
+    <div class="logo">
+      Shersingh <span>Charan</span>
+    </div>
 
-<p class="role">
-Web Developer • Student • Learner
-</p>
+    <ul class="nav-links">
 
-<p class="about">
-Welcome to my portfolio website! I build modern websites using HTML, CSS and JavaScript.
-</p>
+      <li>
+        <a href="#home">Home</a>
+      </li>
 
-<div class="skills">
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">JavaScript</span>
-<span class="skill">GitHub</span>
-</div>
+      <li>
+        <a href="#about">About</a>
+      </li>
 
-<a class="btn github"
-href="https://github.com/charan785192-arch"
-target="_blank">
-Visit My GitHub
-</a>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
 
-<a class="btn contact"
-href="mailto:charan785192@gmail.com">
-Contact Me
-</a>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
 
-<a class="btn whatsapp"
-href="https://wa.me/917490093629?text=Mujhe%20ye%20product%20chahiye"
-target="_blank">
-🛒 Buy on WhatsApp
-</a>
+      <li>
+        <a href="#shop">Shop</a>
+      </li>
 
-<footer>
-© 2026 Shersingh Charan. All Rights Reserved.
-</footer>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
 
-</div>
+    </ul>
 
-</body>
-</html>
+    <a
+      class="nav-btn"
+      href="#contact"
+    >
+      Contact Me
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section
+    class="hero"
+    id="home"
+  >
+
+    <div class="hero-text">
+
+      <div class="small-title">
+        Hi, I'm
+      </div>
+
+      <h1>
+        Shersingh
+        <br>
+        <span>Charan</span>
+      </h1>
+
+      <h2>
+        Web Developer • Student • Learner
+      </h2>
+
+      <p>
+        I build modern, responsive and
+        user-friendly websites using
+        <span>HTML</span>,
+        <span>CSS</span> and
+        <span>JavaScript</span>.
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="#projects"
+        >
+          View My Projects →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://github.com/"
+          target="_blank"
+        >
+          Visit My GitHub
+        </a>
+
+      </div>
+
+
+      <div class="social">
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+        >
+          GH
+        </a>
+
+        <a href="#">
+          in
+        </a>
+
+        <a href="#">
+          IG
+        </a>
+
+        <a href="mailto:yourmail@gmail.com">
+          ✉
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="profile">
+
+      <div class="profile-inner">
+        SC
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <div class="features">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🚀
+      </div>
+
+      <h3>
+        Modern Design
+      </h3>
+
+      <p>
+        Clean, modern and attractive websites
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🛡️
+      </div>
+
+      <h3>
+        Responsive
+      </h3>
+
+      <p>
+        Mobile-first responsive layouts
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ⚡
+      </div>
+
+      <h3>
+        Fast Performance
+      </h3>
+
+      <p>
+        Optimized code for better performance
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🎧
+      </div>
+
+      <h3>
+        Support
+      </h3>
+
+      <p>
+        Always here to help anytime
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="section-title">
+      My <span>Skills</span>
+    </h2>
+
+
+    <div class="skills-grid">
+
+
+      <div class="box">
+
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <b>HTML</b>
+            <span>95%</span>
+          </div>
+
+          <div class="bar">
+            <span style="width:95%"></span>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <b>CSS</b>
+            <span>90%</span>
+          </div>
+
+          <div class="bar">
+            <span style="width:90%"></span>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <b>JavaScript</b>
+            <span>80%</span>
+          </div>
+
+          <div class="bar">
+            <span style="width:80%"></span>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <b>Responsive Design</b>
+            <span>90%</span>
+          </div>
+
+          <div class="bar">
+            <span style="width:90%"></span>
+          </div>
+
+        </div>
+
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <b>Git & GitHub</b>
+            <span>85%</span>
+          </div>
+
+          <div class="bar">
+            <span style="width:85%"></span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECTS -->
+
+      <div
+        class="projects"
+        id="projects"
+      >
+
+
+        <div class="project">
+
+          <div class="project-img">
+            💻
+          </div>
+
+          <span class="tag">
+            HTML • CSS • JS
+          </span>
+
+          <h3>
+            Landing Page
+          </h3>
+
+          <p>
+            Modern landing page for a digital business.
+          </p>
+
+          <a
+            class="project-link"
+            href="#"
+          >
+            Live Demo →
+          </a>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-img">
+            📊
+          </div>
+
+          <span class="tag">
+            HTML • CSS • JS
+          </span>
+
+          <h3>
+            Dashboard UI
+          </h3>
+
+          <p>
+            Responsive dashboard interface design.
+          </p>
+
+          <a
+            class="project-link"
+            href="#"
+          >
+            Live Demo →
+          </a>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-img">
+            🛒
+          </div>
+
+          <span class="tag">
+            HTML • CSS • JS
+          </span>
+
+          <h3>
+            E-Commerce Store
+          </h3>
+
+          <p>
+            Online store website using HTML, CSS & JS.
+          </p>
+
+          <a
+            class="project-link"
+            href="#"
+          >
+            Live Demo →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SHOP -->
+
+  <section id="shop">
+
+    <div class="shop">
+
+      <div class="shop-content">
+
+
+        <div>
+
+          <h2>
+            Our Products
+          </h2>
+
+          <p>
+            Browse amazing products at best prices.
+            Shop now on WhatsApp!
+          </p>
+
+
+          <!-- YOUR WHATSAPP NUMBER -->
+
+          <a
+            class="whatsapp"
+            href="https://wa.me/917490093629?text=Hello%20Shersingh%2C%20I%20want%20to%20know%20about%20your%20products."
+            target="_blank"
+          >
+            🟢 Shop on WhatsApp
+          </a>
+
+        </div>
+
+
+        <div class="products">
+
+
+          <div class="product">
+
+            <div class="product-img">
+              👕
+            </div>
+
+            <h4>
+              Hoodie
+            </h4>
+
+            <div class="price">
+              ₹799
+            </div>
+
+          </div>
+
+
+          <div class="product">
+
+            <div class="product-img">
+              ⌚
+            </div>
+
+            <h4>
+              Watch
+            </h4>
+
+            <div class="price">
+              ₹599
+            </div>
+
+          </div>
+
+
+          <div class="product">
+
+            <div class="product-img">
+              👟
+            </div>
+
+            <h4>
+              Sneakers
+            </h4>
+
+            <div class="price">
+              ₹999
+            </div>
+
+          </div>
+
+
+          <div class="product">
+
+            <div class="product-img">
+              🎒
+            </div>
+
+            <h4>
+              Backpack
+            </h4>
+
+            <div class="price">
+              ₹699
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="contact-box">
+
+      <h2 class="section-title">
+        About <span>Me</span>
+      </h2>
+
+      <p>
+        I'm Shersingh Charan, a passionate
+        Web Developer, Student and Learner.
+        I love creating beautiful, functional
+        and user-friendly websites.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="#"
+      >
+        Download CV
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="contact-box">
+
+      <h2 class="section-title">
+        Let's <span>Work Together</span>
+      </h2>
+
+      <p>
+        Have a project or business idea?
+        Contact me and let's create something amazing.
+      </p>
+
+
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
+
+        <a
+          class="btn btn-primary"
+          href="mailto:yourmail@gmail.com"
+        >
+          📧 Email Me
+        </a>
+
+
+        <!-- YOUR WHATSAPP NUMBER -->
+
+        <a
+          class="btn btn-secondary"
+          href="https://wa.me/917490093629?text=Hello%20Shersingh%2C%20I%20want%20to%20contact%20you."
+          target="_blank"
+        >
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <h3>
+          Shersingh
+          <span style="color:#5d75ff;">
+            Charan
+          </span>
+        </h3>
+
+        <p>
+          Web Developer • Student • Learner
+        </p>
+
+        <p>
+          Building modern websites with
+          HTML, CSS and JavaScript.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#skills">
+          Skills
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#shop">
+          Shop
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="mailto:yourmail@gmail.com">
+          📧 Email
+        </a>
+
+        <!-- YOUR WHATSAPP NUMBER -->
+
+        <a
+          href="https://wa.me/917490093629"
+          target="_blank"
+        >
+          💬 WhatsApp
+        </a>
+
+        <a href="#">
+          📍 India
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Shersingh Charan.
+   
